@@ -157,7 +157,11 @@ Widget? bookAction(
         ? null
         : () async {
             try {
-              await PlanningService.toggleBooking(x['id'] as int);
+              await PlanningService.toggleBooking(
+                x['id'] as int,
+                date: x['session_date'] as String?,
+                booked: !mine,
+              );
               await reload();
             } catch (e) {
               if (c.mounted)
@@ -298,7 +302,29 @@ final List<Module> modules = [
     fields: const [
       Field('name', 'Nom', required: true),
       Field('price', 'Prix (€)', type: FT.number, required: true),
-      Field('duration', 'Durée (ex. 1 mois, 15 jours, 1 entrée)'),
+      Field(
+        'duration_count',
+        'Durée',
+        type: FT.number,
+        required: true,
+        initial: 1,
+      ),
+      Field(
+        'duration_unit',
+        'Unité',
+        type: FT.select,
+        required: true,
+        options: {'DAY': 'Jour(s)', 'MONTH': 'Mois'},
+        initial: 'MONTH',
+      ),
+      Field(
+        'access_type',
+        'Type d’accès',
+        type: FT.select,
+        required: true,
+        options: {'PERIOD': 'Abonnement', 'DAY_PASS': 'Pass journée (1 jour)'},
+        initial: 'PERIOD',
+      ),
       Field('descr', 'Description', type: FT.multiline),
     ],
     titleOf: (m) =>

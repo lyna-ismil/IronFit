@@ -7,10 +7,12 @@ import '../core/theme/brand.dart';
 class LaunchSplash extends StatefulWidget {
   final Future<void> Function() initialize;
   final WidgetBuilder destination;
+  final bool skipAnimation;
   const LaunchSplash({
     super.key,
     required this.initialize,
     required this.destination,
+    this.skipAnimation = false,
   });
 
   @override
@@ -63,7 +65,7 @@ class _LaunchSplashState extends State<LaunchSplash>
     _reducedMotion =
         MediaQuery.disableAnimationsOf(context) ||
         MediaQuery.accessibleNavigationOf(context);
-    if (_reducedMotion) {
+    if (_reducedMotion || widget.skipAnimation) {
       _intro.value = 1;
     } else if (!_started) {
       _intro.forward();
@@ -127,7 +129,10 @@ class _LaunchSplashState extends State<LaunchSplash>
                                 opacity: _opacity,
                                 child: ScaleTransition(
                                   scale: _scale,
-                                  child: BrandLogo(size: size, transparent: true),
+                                  child: BrandLogo(
+                                    size: size,
+                                    transparent: true,
+                                  ),
                                 ),
                               ),
                             ),
@@ -197,5 +202,3 @@ class _LaunchSplashState extends State<LaunchSplash>
     );
   }
 }
-
-

@@ -45,6 +45,8 @@ IronFit est une plateforme de gestion de salle de sport composée :
 | Journal de séances, courbe de poids, présences, paiements | Mesures et présences de ses clients ; planning et pointage de ses cours | Mesures, présences et planning de toute la salle |
 | Notifications (abonnement, coaching, programme, commentaire, annonce, cours annulé) | Notifications (nouvelle demande, séance terminée…) | Notifications |
 
+**Parcours récents** : écran Abonnement unifié, conservation de l'état des onglets, réservations par date et par semaine, durées d'adhésion structurées, entraînements guidés avec séries / répétitions / charges et minuteur de repos, suivi du volume enregistré. Voir [les règles des réservations et adhésions](backend/DATED_MEMBERSHIPS.txt).
+
 **Interface** : identité visuelle noir / ambre / blanc tirée du logo, thèmes clair et sombre (suivant le système), logo officiel en grand sur l'écran de connexion et en filigrane discret sur les autres écrans, mise en page adaptée au téléphone (barre de navigation en bas) et au grand écran (rail latéral avec le logo dès 900 px).
 
 ---
@@ -66,13 +68,13 @@ IronFit est une plateforme de gestion de salle de sport composée :
 | Contrôleurs | `controller` | Routes REST, validation des requêtes (`@Valid`), `@PreAuthorize` pour l'admin / le staff, codes HTTP |
 | Services | `service` (interfaces) + `service/impl` | Règles métier, contrôles de propriété (coach ↔ client), transactions, notifications |
 | Dépôts | `repository` | Spring Data JPA : CRUD + requêtes JPQL (recherche, portée coach, agrégats) |
-| Entités | `entity` | 18 entités JPA (`@Entity`), relations `@ManyToOne` avec `ON DELETE CASCADE / SET NULL` côté base |
+| Entités | `entity` | Entités JPA (`@Entity`), relations `@ManyToOne` avec `ON DELETE CASCADE / SET NULL` côté base |
 | DTO | `dto` | Objets de requête (validés) et de réponse (jamais l'entité ni le hachage du mot de passe) |
 | Sécurité | `security` | JWT (jjwt), filtre d'authentification, hachage bcrypt (+ lecture des anciens hachages scrypt), limitation de débit |
 | Configuration | `config` | Spring Security + CORS, Jackson, propriétés `ironfit.*`, données initiales, dialecte MariaDB de XAMPP |
 | Exceptions | `exception` | `ApiException` + `GlobalExceptionHandler` : réponses d'erreur JSON homogènes |
 
-Versions : **Java 17**, **Spring Boot 3.5.16** (dernière version de la branche 3.x), Hibernate 6.6, MySQL Connector/J, jjwt 0.13, Maven 3.9 (wrapper `mvnw` inclus).
+Versions : **Java 17**, **Spring Boot 3.5.16**, Hibernate 6.6, MySQL Connector/J, jjwt 0.13, Maven 3.9 (wrapper `mvnw` inclus).
 
 ### Frontend (Flutter, `app/`)
 
@@ -372,33 +374,46 @@ Pour un téléphone réel : le backend écoute déjà sur toutes les interfaces 
 
 ## 15. Tests et compilation
 
-```bash
-# Backend : 31 tests d'intégration (MockMvc, base H2 en mode MySQL — XAMPP non requis)
-cd backend
-.\mvnw.cmd test
+Depuis la racine du dépôt, dans PowerShell :
 
-# Application : analyse + 18 tests unitaires / widgets
-cd app
+```powershell
+# Backend : H2 en mémoire, sans toucher à la base MySQL de l'application
+cd backend
+.\mvnw.cmd clean test
+cd ../app
 flutter analyze
-flutter test --exclude-tags integration
+flutter test --concurrency=1
+```
 
-# Intégration Flutter ↔ Spring Boot ↔ MySQL (3 tests, modifient des données → base dédiée) — invite cmd
-cd backend
-set "DB_URL=jdbc:mysql://localhost:3306/ironfit_e2e?createDatabaseIfNotExist=true&connectionTimeZone=UTC"
-set "DDL_AUTO=create-drop"
-mvnw.cmd spring-boot:run
-# dans un autre terminal
-cd app
-flutter test test/backend_integration_test.dart        # IRONFIT_API_URL pour une autre adresse
+Pour inclure les tests Flutter qui modifient des données, utiliser une **nouvelle base dédiée** (choisir un nom neuf à chaque exécution) :
 
-# Compilation
-cd app
-flutter build web             # app/build/web
+```powershell
+# Terminal 1, depuis backend/
+$env:DB_URL='jdbc:mysql://localhost:3306/ironfit_e2e_fresh?createDatabaseIfNotExist=true'
+$env:PORT='8081'
+$env:RATE_LIMIT='1000'
+.\mvnw.cmd spring-boot:run
+```
+
+```powershell
+# Terminal 2, depuis app/
+$env:IRONFIT_API_URL='http://localhost:8081/api'
+flutter test --concurrency=1
+Remove-Item Env:IRONFIT_API_URL
+```
+
+Fermer le terminal du serveur de test après les essais pour ne pas réutiliser ses variables avec la base principale.
+
+```powershell
+# Depuis app/
+flutter build web
 flutter build windows         # Visual Studio requis
 flutter build apk --release   # SDK Android requis
 cd ../backend
-.\mvnw.cmd package            # backend/target/ironfit-backend-3.0.0.jar
+.\mvnw.cmd package            # target/ironfit-backend-3.0.0.jar
 ```
+
+Les tests Flutter qui modifient le backend exigent une variable `IRONFIT_API_URL` explicite et une base de démonstration neuve. Sans cette variable, ils sont ignorés. Ne jamais les diriger vers une base contenant des données à conserver.
 
 Couverture : authentification, jetons falsifiés, révocation, désactivation, réinitialisation, limitation de débit, erreurs HTTP, droits par rôle, isolation coach ↔ clients, double rôle, cycle programme → séance → commentaire → notifications, validation des cours / mesures / séances, annonces, abonnements, statistiques, connexion d'un compte migré (scrypt → bcrypt) ; côté Flutter : client API, migration de l'adresse et du jeton, navigation par rôle (téléphone et grand écran), logo et formulaires.
 
@@ -461,105 +476,88 @@ Les colonnes booléennes (`active`, `seen`) sont de type `bit(1)` et s'affichent
 
 ## 20. Stripe en mode test
 
-L'intégration Stripe est limitée à un usage éducatif et de test : aucune carte réelle ne doit être utilisée et aucune clé `sk_live_` n'est acceptée lorsque `STRIPE_TEST_MODE=true`.
+Projet éducatif : **Sandbox uniquement**, clés `sk_test_`, nouveaux paiements en **EUR**. Le backend refuse les clés live et le mode réel. Changer simplement un indicateur ne permet pas de passer en production.
 
-### 20.1 Créer un compte Stripe et récupérer les clés
+### 20.1 Prix et fonctionnement
 
-1. Aller sur [https://dashboard.stripe.com/register](https://dashboard.stripe.com/register) et créer un compte gratuit.
-2. Dans le tableau de bord Stripe, s'assurer d'être en **mode test** (bascule en haut à droite : « Test mode »).
-3. Aller dans **Developers → API keys** :
-   - Copier la **Publishable key** (`pk_test_...`).
-   - Cliquer sur **Reveal test key** pour copier la **Secret key** (`sk_test_...`).
+| Formule | Prix confirmé | Paiement actuel |
+|---|---:|---|
+| Séance | 10 € | Achat unique |
+| Mensuel | 60 € | Achat unique, renouvellement manuel |
+| Trimestriel | 160 € | Achat unique, renouvellement manuel |
+| Annuel | 550 € | Achat unique |
 
-### 20.2 Configurer le backend
+Les prix viennent des formules du backend ; ces montants sont les prix de démonstration approuvés, pas une conversion TND → EUR. Les anciens paiements TND conservent leur devise et leurs montants. Les montants Stripe EUR sont stockés en centimes, avec leur devise.
 
-Ajouter les clés dans `backend/.env` :
+Mensuel et Trimestriel restent volontairement des achats uniques. Les paramètres `STRIPE_PLAN_<id>_INTERVAL` / `INTERVAL_COUNT` sont réservés à une configuration récurrente explicitement approuvée ; ne pas les ajouter pour les formules actuelles.
+
+### 20.2 Configuration et lancement
+
+Copier `backend/.env.example` vers `backend/.env`, puis renseigner localement :
 
 ```properties
 STRIPE_SECRET_KEY=sk_test_...
 STRIPE_PUBLISHABLE_KEY=pk_test_...
 STRIPE_TEST_MODE=true
-STRIPE_TAX_PERCENT=19
-STRIPE_CREATE_INVOICE=false
-STRIPE_WEBHOOK_SECRET=whsec_...   # voir §20.3
 STRIPE_CURRENCY=eur
 STRIPE_RETURN_URL=http://localhost:5173
+STRIPE_WEBHOOK_SECRET=whsec_...
+STRIPE_AUTOMATIC_TAX=false
 ```
 
-> `STRIPE_TAX_PERCENT` s'applique à tous les montants (ex. `19` = 19 %). Mettre `0` pour désactiver. `STRIPE_CURRENCY` doit correspondre à la devise configurée dans votre compte Stripe (par défaut `eur`).
+Le fichier `.env` est exclu de Git. Spring importe `optional:file:.env[.properties]` relativement au répertoire de lancement : démarrer depuis **backend/**. Les variables d'environnement du processus peuvent surcharger ces valeurs. Ne pas ajouter de commentaire après une clé sur la même ligne et ne jamais publier les secrets.
 
-### 20.3 Configurer le webhook (écoute locale avec Stripe CLI)
+Dans des terminaux séparés, depuis les dossiers indiqués :
 
-Le webhook permet à Stripe de notifier le backend quand un paiement est confirmé, afin d'activer l'abonnement du membre.
-
-**Installation de la Stripe CLI :**
-
-```bash
-# Windows (avec Scoop)
-scoop install stripe
-
-# ou téléchargement direct : https://github.com/stripe/stripe-cli/releases
-# Décompresser stripe.exe et l'ajouter au PATH
+```powershell
+# backend/
+.\mvnw.cmd spring-boot:run
 ```
 
-**Authentification :**
-
-```bash
-stripe login
-# Ouvre le navigateur → autoriser l'accès → la CLI est liée à votre compte
+```powershell
+# app/ — garder le même port pour le retour Stripe et la session connectée
+flutter run -d chrome --web-port=5173
+# Alternative sans lancement automatique du navigateur :
+# flutter run -d web-server --web-port=5173 --web-hostname=localhost
 ```
 
-**Écoute des événements en local :**
+Après toute modification Java, compiler puis redémarrer le processus réel. Un ancien serveur sur 8080 ne charge pas automatiquement le nouveau JAR. Sous Windows, arrêter le JAR avant de le remplacer.
 
-```bash
-stripe listen --forward-to http://localhost:8080/api/payments/stripe/webhook
+### 20.3 Webhook local
+
+Utiliser la Stripe CLI connectée au **même Sandbox** que la clé du backend :
+
+```powershell
+stripe listen --events checkout.session.completed,checkout.session.async_payment_succeeded,checkout.session.async_payment_failed,checkout.session.expired,invoice.paid,invoice.payment_failed,customer.subscription.updated,customer.subscription.deleted --forward-to http://localhost:8080/api/payments/stripe/webhook
 ```
 
-La CLI affiche une ligne de ce type :
+Copier le secret de signature de cette écoute dans `STRIPE_WEBHOOK_SECRET`, puis redémarrer Spring Boot. Vérifier sa correspondance après un changement de compte ou de configuration. Garder l'écoute active pendant les essais. Le chemin `/api/stripe/webhook` est incorrect.
 
-```
-> Ready! Your webhook signing secret is whsec_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+Le helper local `python -u scripts/stripe_test_listener.py`, lancé depuis `backend/`, utilise la clé de `.env` et masque les secrets dans sa sortie. Il requiert Python et la Stripe CLI installée via WinGet sous Windows. Il ne met pas à jour le secret de signature ni ne redémarre le backend automatiquement.
 
-Copier ce secret `whsec_...` dans `backend/.env` sous `STRIPE_WEBHOOK_SECRET=`, puis redémarrer le backend.
+### 20.4 Retour et confirmation
 
-> La commande `stripe listen` doit rester active pendant vos tests. Chaque fois que vous la relancez, Stripe génère un nouveau `whsec_` — pensez à mettre à jour `.env`.
+1. Le membre choisit une formule ; le serveur crée une Checkout Session avec les prix du backend.
+2. Stripe renvoie vers `http://localhost:5173/?payment_order=<id>&payment_return=success` (ou `cancel`).
+3. Flutter restaure la connexion et ouvre le suivi du paiement sans rejouer l'animation d'introduction.
+4. Le webhook signé valide le règlement et met à jour le paiement et l'adhésion dans une transaction.
+5. La page interroge le statut avec une limite de tentatives. Pour une session terminée encore en attente, elle demande une vérification serveur et affiche la confirmation seulement lorsque le backend l'atteste.
 
-### 20.4 Tester un paiement
+Le paramètre de retour ne prouve jamais le paiement. La route authentifiée `POST /api/payments/stripe/orders/{id}/reconcile` contrôle la propriété, l'environnement test, le client Stripe, les références, le montant et la devise. Les doublons ne doivent créer ni paiement local supplémentaire ni prolongation supplémentaire.
 
-**Cartes de test Stripe (ne jamais utiliser une vraie carte) :**
+En cas de paiement réussi mais encore en attente, vérifier le webhook, son secret et les journaux, puis utiliser « Vérifier le paiement ». **Ne pas payer une seconde fois pour débloquer un premier règlement.** Un événement original peut être redélivré depuis Stripe ; un événement générique de démonstration ne remplace pas la preuve de paiement de la commande.
 
-| Carte | Résultat |
-|---|---|
-| `4242 4242 4242 4242` | Paiement accepté |
-| `4000 0000 0000 0002` | Paiement refusé |
-| `4000 0025 0000 3155` | Authentification 3D Secure requise |
+### 20.5 Taxes, factures et portail
 
-Date d'expiration : n'importe quelle date future. CVC : n'importe quels 3 chiffres. Code postal : n'importe quels 5 chiffres.
+- `STRIPE_AUTOMATIC_TAX=false` désactive le calcul automatique des taxes. Son activation nécessite une configuration Stripe Tax valide et `STRIPE_PLAN_<id>_TAX_CODE` pour la formule concernée.
+- Les anciens paramètres `STRIPE_TAX_PERCENT` et `STRIPE_CREATE_INVOICE` ne pilotent pas le flux Checkout actuel. Ne pas en déduire une taxe de 19 % ni l'absence de facture.
+- Le Checkout d'achat unique demande la création d'une facture Stripe. Le lien disponible apparaît dans l'historique après traitement.
+- Le portail de facturation nécessite une configuration dans le même Sandbox et un client Stripe associé au membre. Une erreur de configuration n'active aucune adhésion.
 
-**Flux complet :**
+### 20.6 Vérification et limites
 
-1. Démarrer le backend (`.\mvnw.cmd spring-boot:run`).
-2. Dans un autre terminal : `stripe listen --forward-to http://localhost:8080/api/payments/stripe/webhook`.
-3. Dans l'application Flutter, se connecter en tant que membre et aller dans **Abonnement → Payer par carte**.
-4. Entrer la carte de test `4242 4242 4242 4242`, une date future, et n'importe quel CVC.
-5. Le terminal Stripe CLI affiche les événements reçus (`payment_intent.succeeded`, etc.).
-6. L'abonnement du membre est activé dans la base.
+Le [rapport du 16 novembre 2026](backend/STRIPE_VERIFICATION.txt) détaille la récupération des règlements, les contrôles de doublons et la préservation de l'historique TND : **70 tests backend** et **42 tests Flutter** réussis, y compris l'intégration Flutter sur une base dédiée. L'analyse Flutter sortait avec le code **1** pour **74 diagnostics informatifs**, sans avertissement ni erreur : ce n'est pas une analyse sans diagnostic.
 
-**Déclencher manuellement un événement de test :**
+Le webhook réel a été vérifié par redélivrance d'événements Stripe Sandbox. L'utilisateur a confirmé l'affichage automatique après rafraîchissement de la page de retour ; un nouveau parcours navigateur ininterrompu n'a pas été observé indépendamment par l'agent.
 
-```bash
-stripe trigger payment_intent.succeeded
-```
-
-### 20.5 Webhook en production (hébergement réel)
-
-Pour un déploiement en production :
-
-1. Dans le tableau de bord Stripe → **Developers → Webhooks → Add endpoint**.
-2. URL : `https://votre-domaine.com/api/payments/stripe/webhook`.
-3. Événements à écouter : `payment_intent.succeeded`, `checkout.session.completed`, `invoice.paid`.
-4. Copier le **Signing secret** de l'endpoint dans la variable d'environnement `STRIPE_WEBHOOK_SECRET` du serveur.
-5. Passer `STRIPE_TEST_MODE=false` et utiliser des clés live (`sk_live_...`, `pk_live_...`).
-
-> En production, ne jamais versionner les clés Stripe. Les injecter via les variables d'environnement du serveur (Render, Railway, Heroku Config Vars, etc.).
+Ce projet n'autorise pas les paiements réels. Une éventuelle mise en production demanderait une revue distincte de l'éligibilité de l'entreprise, des coordonnées bancaires, de la fiscalité et de la sécurité ; sélectionner un pays dans Stripe ne suffit pas.

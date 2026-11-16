@@ -455,7 +455,7 @@ class _MemberHomeState extends State<MemberHome> {
                       ),
                       title: Text('${c['title']}'),
                       subtitle: Text(
-                        '${dayLabel(c['day'] as int)} · ${c['time']} · ${c['coach_name'] ?? '—'}',
+                        '${c['session_date'] ?? dayLabel(c['day'] as int)} · ${c['time']} · ${c['coach_name'] ?? '—'}',
                       ),
                     ),
                   ),

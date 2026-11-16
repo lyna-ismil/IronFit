@@ -1,0 +1,644 @@
+15:30:51.808 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ironfit.AuthApiTest]: AuthApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:30:51.975 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.AuthApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:30:52.477+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.AuthApiTest                  : Starting AuthApiTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:30:52.478+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.AuthApiTest                  : The following 1 profile is active: "test"
+2026-11-16T15:30:53.526+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:30:53.706+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:30:54.565+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:30:54.771+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-11-16T15:30:54.845+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:30:55.246+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:30:55.276+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T15:30:55.442+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fda32e63-5682-4fb8-9dcb-4c9251f2ff97 user=SA
+2026-11-16T15:30:55.442+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T15:30:55.493+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:30:56.873+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:30:56.977+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:30:57.496+01:00  INFO 9300 --- [ironfit] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-16T15:31:01.238+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:01.238+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:01.239+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T15:31:01.271+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.AuthApiTest                  : Started AuthApiTest in 9.13 seconds (process running for 10.246)
+2026-11-16T15:31:01.851+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-16T15:31:03.165+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.impl.AuthServiceImpl   : [Mot de passe oubli�] code de d�monstration g�n�r� pour le compte #3
+2026-11-16T15:31:04.992+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:05.004+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-16T15:31:05.005+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-16T15:31:05.013+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.ClassAndDataApiTest]: ClassAndDataApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:05.017+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.ClassAndDataApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:05.055+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.ClassAndDataApiTest          : Starting ClassAndDataApiTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:05.055+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.ClassAndDataApiTest          : The following 1 profile is active: "test"
+2026-11-16T15:31:05.321+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:05.373+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:05.502+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:05.505+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:05.505+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:05.520+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-16T15:31:05.520+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:b9e4e3bf-da46-4d16-bac4-8377d58fb33c user=SA
+2026-11-16T15:31:05.520+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-16T15:31:05.520+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:05.756+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:05.838+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:07.284+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:07.284+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:07.287+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-11-16T15:31:07.306+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.ClassAndDataApiTest          : Started ClassAndDataApiTest in 2.286 seconds (process running for 16.281)
+2026-11-16T15:31:07.838+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:10.882+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:10.888+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-11-16T15:31:10.888+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-11-16T15:31:10.891+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.CoachingApiTest]: CoachingApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:10.896+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.CoachingApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:10.925+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.CoachingApiTest              : Starting CoachingApiTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:10.925+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.CoachingApiTest              : The following 1 profile is active: "test"
+2026-11-16T15:31:11.275+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:11.358+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:11.470+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:11.472+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:11.477+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:11.477+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-16T15:31:11.477+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:045a45de-54c3-4491-8b33-1439da88c2fd user=SA
+2026-11-16T15:31:11.477+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-16T15:31:11.491+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:11.679+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:11.704+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:12.338+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:12.338+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:12.338+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T15:31:12.349+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.CoachingApiTest              : Started CoachingApiTest in 1.449 seconds (process running for 21.323)
+2026-11-16T15:31:12.780+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:15.668+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:15.671+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-11-16T15:31:15.671+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-11-16T15:31:15.677+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.CurrencyMigrationTest]: CurrencyMigrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:15.677+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.CurrencyMigrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:15.706+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.CurrencyMigrationTest        : Starting CurrencyMigrationTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:15.706+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.CurrencyMigrationTest        : The following 1 profile is active: "test"
+2026-11-16T15:31:15.938+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:15.977+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:16.045+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:16.057+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:16.066+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:16.067+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-11-16T15:31:16.068+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:9e308ded-e627-4727-a25a-2aad9e7a68d2 user=SA
+2026-11-16T15:31:16.069+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-11-16T15:31:16.070+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:16.199+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:16.220+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:16.804+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:16.805+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:16.805+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T15:31:16.810+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.CurrencyMigrationTest        : Started CurrencyMigrationTest in 1.126 seconds (process running for 25.787)
+2026-11-16T15:31:17.231+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:17.256+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:17.258+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-11-16T15:31:17.261+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-11-16T15:31:17.268+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.DatedBookingTest]: DatedBookingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:17.270+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.DatedBookingTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:17.290+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.DatedBookingTest             : Starting DatedBookingTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:17.290+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.DatedBookingTest             : The following 1 profile is active: "test"
+2026-11-16T15:31:17.487+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:17.532+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:17.589+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:17.589+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:17.600+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:17.601+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-11-16T15:31:17.603+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:b85da6e4-73b3-41a5-bbce-65cf7eb21f2c user=SA
+2026-11-16T15:31:17.603+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-11-16T15:31:17.604+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:17.710+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:17.731+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:18.253+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:18.253+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:18.255+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-16T15:31:18.255+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.DatedBookingTest             : Started DatedBookingTest in 0.982 seconds (process running for 27.239)
+2026-11-16T15:31:18.692+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:19.346+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:19.349+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-11-16T15:31:19.350+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-11-16T15:31:19.354+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.DualRoleApiTest]: DualRoleApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:19.354+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.DualRoleApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:19.376+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.DualRoleApiTest              : Starting DualRoleApiTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:19.376+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.DualRoleApiTest              : The following 1 profile is active: "test"
+2026-11-16T15:31:19.575+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:19.624+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:19.688+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:19.689+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:19.700+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:19.700+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-11-16T15:31:19.700+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:7cc27ce4-8335-4167-9b0f-5c9dcc407c6c user=SA
+2026-11-16T15:31:19.700+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-11-16T15:31:19.706+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:19.806+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:19.832+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:20.265+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:20.266+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:20.266+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T15:31:20.271+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.DualRoleApiTest              : Started DualRoleApiTest in 0.912 seconds (process running for 29.245)
+2026-11-16T15:31:20.677+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:22.171+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:22.179+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-11-16T15:31:22.179+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-11-16T15:31:22.179+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.RateLimitApiTest]: RateLimitApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:22.179+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.RateLimitApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:22.207+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.RateLimitApiTest             : Starting RateLimitApiTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:22.207+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.RateLimitApiTest             : The following 1 profile is active: "test"
+2026-11-16T15:31:22.404+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:22.453+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:22.512+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:22.512+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:22.519+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:22.523+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-11-16T15:31:22.523+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:2b456728-c93b-483c-87e8-47b61c7eeb1d user=SA
+2026-11-16T15:31:22.523+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-11-16T15:31:22.525+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:22.610+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:22.622+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:22.996+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:22.996+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:22.996+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T15:31:23.002+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.RateLimitApiTest             : Started RateLimitApiTest in 0.816 seconds (process running for 31.976)
+2026-11-16T15:31:23.407+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:23.661+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:23.663+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-11-16T15:31:23.664+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-11-16T15:31:23.666+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.RoleAccessApiTest]: RoleAccessApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:23.668+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.RoleAccessApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:23.686+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.RoleAccessApiTest            : Starting RoleAccessApiTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:23.686+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.RoleAccessApiTest            : The following 1 profile is active: "test"
+2026-11-16T15:31:23.855+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:23.891+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:23.944+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:23.949+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:23.960+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:23.960+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-11-16T15:31:23.962+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:0c641293-10f6-47ba-8577-597f3f8def4a user=SA
+2026-11-16T15:31:23.963+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-11-16T15:31:23.964+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:24.039+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:24.059+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:24.453+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:24.453+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:24.453+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T15:31:24.457+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.RoleAccessApiTest            : Started RoleAccessApiTest in 0.787 seconds (process running for 33.433)
+2026-11-16T15:31:24.867+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:26.045+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:26.054+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-11-16T15:31:26.054+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-11-16T15:31:26.067+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.StripeRegressionTest]: StripeRegressionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:26.068+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.StripeRegressionTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:26.084+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.StripeRegressionTest         : Starting StripeRegressionTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:26.087+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.StripeRegressionTest         : The following 1 profile is active: "test"
+2026-11-16T15:31:26.267+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:26.306+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:26.354+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:26.356+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:26.364+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:26.365+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-11-16T15:31:26.367+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn80: url=jdbc:h2:mem:72a0f9dd-91d2-4191-be5f-850a989bca4d user=SA
+2026-11-16T15:31:26.367+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-11-16T15:31:26.368+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:26.435+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:26.449+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:26.810+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:26.810+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:26.824+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
+2026-11-16T15:31:26.828+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.StripeRegressionTest         : Started StripeRegressionTest in 0.758 seconds (process running for 35.803)
+2026-11-16T15:31:27.228+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:27.933+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : reconcile: fulfilled order regr-pending for member 4
+2026-11-16T15:31:28.158+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:28.159+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-sub-defer' for event type=checkout.session.completed
+2026-11-16T15:31:28.215+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:28.215+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='order-does-not-exist-xyz' for event type=checkout.session.completed
+2026-11-16T15:31:28.215+01:00 ERROR 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: unexpected IllegalStateException for order 'order-does-not-exist-xyz': Order not yet persisted; retry webhook
+2026-11-16T15:31:28.215+01:00 ERROR 9300 --- [ironfit] [           main] c.i.exception.GlobalExceptionHandler     : Erreur inattendue sur POST /api/payments/stripe/webhook
+
+java.lang.IllegalStateException: Order not yet persisted; retry webhook
+	at com.ironfit.service.StripeCheckoutService.lambda$webhook$6(StripeCheckoutService.java:247) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.ironfit.service.StripeCheckoutService.webhook(StripeCheckoutService.java:247) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.19.jar:6.2.19]
+	at com.ironfit.service.StripeCheckoutService$$SpringCGLIB$$0.webhook(<generated>) ~[classes/:na]
+	at com.ironfit.controller.StripePaymentController.webhook(StripePaymentController.java:18) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at com.ironfit.security.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:51) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at com.ironfit.config.SecurityConfig$1.doFilterInternal(SecurityConfig.java:87) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.19.jar:6.2.19]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.2.19.jar:6.2.19]
+	at com.ironfit.StripeRegressionTest.sendWebhook(StripeRegressionTest.java:69) ~[test-classes/:na]
+	at com.ironfit.StripeRegressionTest.unknownOrderIdRequestsStripeRetry(StripeRegressionTest.java:203) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-11-16T15:31:28.275+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:28.275+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-root' for event type=invoice.paid
+2026-11-16T15:31:28.275+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order regr-root for member 4
+2026-11-16T15:31:28.315+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:28.315+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-root-idem' for event type=invoice.paid
+2026-11-16T15:31:28.328+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order regr-root-idem for member 4
+2026-11-16T15:31:28.336+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:28.336+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-root-idem' for event type=invoice.paid
+2026-11-16T15:31:28.393+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:28.400+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-subid' for event type=invoice.paid
+2026-11-16T15:31:28.407+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order regr-subid for member 4
+2026-11-16T15:31:28.438+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:28.438+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-parent' for event type=invoice.paid
+2026-11-16T15:31:28.442+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order regr-parent for member 4
+2026-11-16T15:31:28.465+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:28.465+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='' for event type=invoice.paid
+2026-11-16T15:31:28.465+01:00  WARN 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: could not resolve order id for event type=invoice.paid � skipping
+2026-11-16T15:31:28.482+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:28.482+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='regr-rec' for event type=checkout.session.completed
+2026-11-16T15:31:28.496+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order regr-rec for member 4
+2026-11-16T15:31:28.699+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:28.706+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-11-16T15:31:28.706+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-11-16T15:31:28.735+01:00  INFO 9300 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.StripeWebhookTest]: StripeWebhookTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T15:31:28.740+01:00  INFO 9300 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.StripeWebhookTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:31:28.810+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.StripeWebhookTest            : Starting StripeWebhookTest using Java 17.0.12 with PID 9300 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:31:28.810+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.StripeWebhookTest            : The following 1 profile is active: "test"
+2026-11-16T15:31:29.317+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:31:29.387+01:00  INFO 9300 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:31:29.553+01:00  INFO 9300 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:31:29.555+01:00  INFO 9300 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:31:29.575+01:00  INFO 9300 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:31:29.577+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-11-16T15:31:29.579+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection conn90: url=jdbc:h2:mem:8d338b6a-b62d-481a-bdf8-056c4b487e0e user=SA
+2026-11-16T15:31:29.580+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-11-16T15:31:29.581+01:00  INFO 9300 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:31:29.828+01:00  INFO 9300 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:31:29.869+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:30.914+01:00  INFO 9300 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T15:31:30.915+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T15:31:30.917+01:00  INFO 9300 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-16T15:31:30.944+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.StripeWebhookTest            : Started StripeWebhookTest in 2.202 seconds (process running for 39.919)
+2026-11-16T15:31:31.417+01:00  INFO 9300 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T15:31:31.470+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:31.470+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.completed
+2026-11-16T15:31:31.498+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.async_payment_failed
+2026-11-16T15:31:31.498+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.async_payment_failed
+2026-11-16T15:31:31.720+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:31.720+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.completed
+2026-11-16T15:31:31.763+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:31.764+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.completed
+2026-11-16T15:31:31.769+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order fixture for member 4
+2026-11-16T15:31:31.832+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.expired
+2026-11-16T15:31:31.832+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.expired
+2026-11-16T15:31:31.858+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:31.859+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.completed
+2026-11-16T15:31:31.865+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order fixture for member 4
+2026-11-16T15:31:31.871+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:31.871+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.completed
+2026-11-16T15:31:31.900+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:31.902+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=invoice.paid
+2026-11-16T15:31:31.907+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order fixture for member 4
+2026-11-16T15:31:31.907+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:31.907+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=invoice.paid
+2026-11-16T15:31:31.938+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=invoice.paid
+2026-11-16T15:31:31.939+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=invoice.paid
+2026-11-16T15:31:31.944+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order fixture for member 4
+2026-11-16T15:31:31.967+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:31:31.967+01:00  INFO 9300 --- [ironfit] [           main] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='fixture' for event type=checkout.session.completed
+2026-11-16T15:31:31.978+01:00  INFO 9300 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:31:31.984+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-11-16T15:31:31.984+01:00  INFO 9300 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.

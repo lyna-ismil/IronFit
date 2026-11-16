@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Ne fait rien si au moins un utilisateur existe (données importées ou déjà saisies).
  */
 @Component
+@org.springframework.core.annotation.Order(0)
 public class DataInitializer implements ApplicationRunner {
     private static final Logger log = LoggerFactory.getLogger(DataInitializer.class);
 
@@ -75,6 +76,7 @@ public class DataInitializer implements ApplicationRunner {
             // Explicitly approved EUR catalogue; once only, never touch payment history.
             var approved = java.util.Map.of("Séance", 10, "Mensuel", 60, "Trimestriel", 160, "Annuel", 550);
             for (Plan p : plans.findAll()) {
+                com.ironfit.service.MembershipRules.infer(p);
                 if ("TND".equals(p.getCurrency()) && approved.containsKey(p.getName())) {
                     p.setPrice(BigDecimal.valueOf(approved.get(p.getName())));
                     p.setCurrency("EUR");
@@ -109,6 +111,7 @@ public class DataInitializer implements ApplicationRunner {
         p.setPrice(BigDecimal.valueOf(price));
         p.setCurrency("EUR");
         p.setDuration(duration);
+        com.ironfit.service.MembershipRules.infer(p);
         p.setDescr(descr);
         return plans.save(p);
     }

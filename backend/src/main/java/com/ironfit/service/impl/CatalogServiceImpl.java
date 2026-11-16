@@ -66,6 +66,9 @@ public class CatalogServiceImpl implements CatalogService {
         p.setName(r.name().trim());
         p.setPrice(r.price());
         p.setDuration(Texts.clean(r.duration()));
+        p.setDurationUnit(r.durationUnit());p.setDurationCount(r.durationCount());p.setAccessType(r.accessType());
+        com.ironfit.service.MembershipRules.validate(p);
+        p.setDuration(com.ironfit.service.MembershipRules.snapshot(p));
         p.setDescr(Texts.clean(r.descr()));
     }
 

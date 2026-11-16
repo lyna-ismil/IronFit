@@ -1,0 +1,364 @@
+10:43:24.295 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ironfit.AuthApiTest]: AuthApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:43:24.538 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.AuthApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:43:25.268+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.AuthApiTest                  : Starting AuthApiTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:43:25.268+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.AuthApiTest                  : The following 1 profile is active: "test"
+2026-11-16T10:43:26.962+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:43:27.196+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:43:28.607+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:43:28.873+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-11-16T10:43:28.962+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:43:29.753+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:43:29.798+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T10:43:30.005+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d63388e7-cfac-40e3-8bde-b2a0b9d822f9 user=SA
+2026-11-16T10:43:30.010+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T10:43:30.074+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:43:31.928+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:43:32.062+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:32.908+01:00  INFO 22200 --- [ironfit] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-16T10:43:38.687+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:43:38.690+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:43:38.690+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T10:43:38.744+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.AuthApiTest                  : Started AuthApiTest in 13.989 seconds (process running for 15.621)
+2026-11-16T10:43:39.604+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-16T10:43:41.398+01:00  INFO 22200 --- [ironfit] [           main] c.ironfit.service.impl.AuthServiceImpl   : [Mot de passe oubli�] code de d�monstration g�n�r� pour le compte #3
+2026-11-16T10:43:43.846+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:43.874+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-16T10:43:43.874+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-16T10:43:43.894+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.ClassAndDataApiTest]: ClassAndDataApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:43:43.898+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.ClassAndDataApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:43:43.954+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.ClassAndDataApiTest          : Starting ClassAndDataApiTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:43:43.954+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.ClassAndDataApiTest          : The following 1 profile is active: "test"
+2026-11-16T10:43:44.312+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:43:44.410+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:43:44.568+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:43:44.570+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:43:44.596+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:43:44.596+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-16T10:43:44.596+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:241646c0-aff6-48ed-b8ad-3c85c9c8908d user=SA
+2026-11-16T10:43:44.596+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-16T10:43:44.596+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:43:44.839+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:43:44.895+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:45.865+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:43:45.865+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:43:45.867+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-16T10:43:45.874+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.ClassAndDataApiTest          : Started ClassAndDataApiTest in 1.971 seconds (process running for 22.756)
+2026-11-16T10:43:46.540+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:43:50.999+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:51.005+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-11-16T10:43:51.005+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-11-16T10:43:51.018+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.CoachingApiTest]: CoachingApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:43:51.021+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.CoachingApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:43:51.058+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.CoachingApiTest              : Starting CoachingApiTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:43:51.058+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.CoachingApiTest              : The following 1 profile is active: "test"
+2026-11-16T10:43:51.480+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:43:51.561+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:43:51.707+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:43:51.707+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:43:51.728+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:43:51.728+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-16T10:43:51.728+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:88e6a841-9f55-4d08-be46-ac2f5b6be6ca user=SA
+2026-11-16T10:43:51.728+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-16T10:43:51.728+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:43:51.982+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:43:52.021+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:52.912+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:43:52.912+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:43:52.914+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T10:43:52.924+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.CoachingApiTest              : Started CoachingApiTest in 1.898 seconds (process running for 29.805)
+2026-11-16T10:43:53.540+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:43:57.387+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:57.396+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-11-16T10:43:57.396+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-11-16T10:43:57.407+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.CurrencyMigrationTest]: CurrencyMigrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:43:57.412+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.CurrencyMigrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:43:57.443+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.CurrencyMigrationTest        : Starting CurrencyMigrationTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:43:57.443+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.CurrencyMigrationTest        : The following 1 profile is active: "test"
+2026-11-16T10:43:57.762+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:43:57.826+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:43:57.916+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:43:57.919+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:43:57.936+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:43:57.937+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-11-16T10:43:57.937+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:ac8af5ad-b45f-4339-a376-aa07a24bf2ca user=SA
+2026-11-16T10:43:57.937+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-11-16T10:43:57.937+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:43:58.120+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:43:58.152+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:58.813+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:43:58.813+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:43:58.813+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T10:43:58.822+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.CurrencyMigrationTest        : Started CurrencyMigrationTest in 1.406 seconds (process running for 35.7)
+2026-11-16T10:43:59.380+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:43:59.417+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:43:59.422+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-11-16T10:43:59.422+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-11-16T10:43:59.429+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.DatedBookingTest]: DatedBookingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:43:59.436+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.DatedBookingTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:43:59.465+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.DatedBookingTest             : Starting DatedBookingTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:43:59.465+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.DatedBookingTest             : The following 1 profile is active: "test"
+2026-11-16T10:43:59.776+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:43:59.848+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:43:59.943+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:43:59.943+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:43:59.954+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:43:59.954+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-11-16T10:43:59.964+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:4077300a-4e3a-4c52-9650-c8bf8ca9f8c3 user=SA
+2026-11-16T10:43:59.964+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-11-16T10:43:59.964+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:44:00.106+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:44:00.146+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:00.787+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:44:00.787+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:44:00.787+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T10:44:00.797+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.DatedBookingTest             : Started DatedBookingTest in 1.359 seconds (process running for 37.681)
+2026-11-16T10:44:01.354+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:44:02.172+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:02.172+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-11-16T10:44:02.172+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-11-16T10:44:02.187+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.DualRoleApiTest]: DualRoleApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:44:02.193+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.DualRoleApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:44:02.220+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.DualRoleApiTest              : Starting DualRoleApiTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:44:02.220+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.DualRoleApiTest              : The following 1 profile is active: "test"
+2026-11-16T10:44:02.526+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:44:02.587+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:44:02.672+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:44:02.672+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:44:02.672+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:44:02.688+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-11-16T10:44:02.688+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:4d072221-17bd-4962-ba5f-b1113f37f1cb user=SA
+2026-11-16T10:44:02.688+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-11-16T10:44:02.693+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:44:02.806+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:44:02.838+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:03.402+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:44:03.402+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:44:03.408+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2026-11-16T10:44:03.408+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.DualRoleApiTest              : Started DualRoleApiTest in 1.213 seconds (process running for 40.292)
+2026-11-16T10:44:03.961+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:44:05.992+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:05.992+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-11-16T10:44:05.998+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-11-16T10:44:05.999+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.RateLimitApiTest]: RateLimitApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:44:06.006+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.RateLimitApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:44:06.040+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.RateLimitApiTest             : Starting RateLimitApiTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:44:06.040+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.RateLimitApiTest             : The following 1 profile is active: "test"
+2026-11-16T10:44:06.340+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:44:06.394+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:44:06.464+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:44:06.471+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:44:06.477+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:44:06.477+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-11-16T10:44:06.477+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:a093ae58-c1df-4993-8985-e72e163f6e3c user=SA
+2026-11-16T10:44:06.477+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-11-16T10:44:06.477+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:44:06.603+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:44:06.639+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:07.168+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:44:07.168+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:44:07.172+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2026-11-16T10:44:07.172+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.RateLimitApiTest             : Started RateLimitApiTest in 1.16 seconds (process running for 44.056)
+2026-11-16T10:44:07.729+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:44:08.062+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:08.062+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-11-16T10:44:08.062+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-11-16T10:44:08.068+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.RoleAccessApiTest]: RoleAccessApiTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:44:08.072+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.RoleAccessApiTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:44:08.096+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.RoleAccessApiTest            : Starting RoleAccessApiTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:44:08.098+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.RoleAccessApiTest            : The following 1 profile is active: "test"
+2026-11-16T10:44:08.311+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:44:08.365+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:44:08.437+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:44:08.441+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:44:08.449+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:44:08.452+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-11-16T10:44:08.452+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:d85c1a6b-015d-411d-84ac-45acdd184e47 user=SA
+2026-11-16T10:44:08.453+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-11-16T10:44:08.454+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:44:08.536+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:44:08.557+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:09.061+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:44:09.061+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:44:09.062+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-16T10:44:09.068+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.RoleAccessApiTest            : Started RoleAccessApiTest in 0.993 seconds (process running for 45.947)
+2026-11-16T10:44:09.616+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:44:11.311+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:11.311+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-11-16T10:44:11.311+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-11-16T10:44:11.331+01:00  INFO 22200 --- [ironfit] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ironfit.StripeWebhookTest]: StripeWebhookTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-16T10:44:11.333+01:00  INFO 22200 --- [ironfit] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ironfit.IronFitApplication for test class com.ironfit.StripeWebhookTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T10:44:11.358+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.StripeWebhookTest            : Starting StripeWebhookTest using Java 17.0.12 with PID 22200 (started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T10:44:11.358+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.StripeWebhookTest            : The following 1 profile is active: "test"
+2026-11-16T10:44:11.599+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T10:44:11.643+01:00  INFO 22200 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 20 JPA repository interfaces.
+2026-11-16T10:44:11.718+01:00  INFO 22200 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T10:44:11.725+01:00  INFO 22200 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T10:44:11.735+01:00  INFO 22200 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T10:44:11.736+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-11-16T10:44:11.738+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn80: url=jdbc:h2:mem:9de7ba19-f5b4-4544-a67f-8b82c305e230 user=SA
+2026-11-16T10:44:11.738+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-11-16T10:44:11.741+01:00  INFO 22200 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T10:44:11.838+01:00  INFO 22200 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T10:44:11.867+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:12.360+01:00  INFO 22200 --- [ironfit] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-16T10:44:12.360+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-16T10:44:12.360+01:00  INFO 22200 --- [ironfit] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-16T10:44:12.367+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.StripeWebhookTest            : Started StripeWebhookTest in 1.032 seconds (process running for 49.245)
+2026-11-16T10:44:12.888+01:00  INFO 22200 --- [ironfit] [           main] com.ironfit.config.DataInitializer       : Base initialis�e avec les donn�es de d�monstration
+2026-11-16T10:44:13.234+01:00  INFO 22200 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T10:44:13.236+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-11-16T10:44:13.236+01:00  INFO 22200 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.

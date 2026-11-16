@@ -197,7 +197,8 @@ class _MembershipPageState extends State<MembershipPage> {
                                             'Annuler cette demande ?',
                                           ))
                                             return;
-                                          if (!mounted) return;
+                                          if (!mounted || !context.mounted)
+                                            return;
                                           setState(() => _busy = true);
                                           final ok = await attempt(
                                             context,

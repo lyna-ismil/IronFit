@@ -1,0 +1,45 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-16T15:42:57.807+01:00  INFO 31444 --- [ironfit] [           main] com.ironfit.IronFitApplication           : Starting IronFitApplication v3.0.0 using Java 17.0.12 with PID 31444 (C:\Users\Lina\Desktop\IronFit_Flutter-main\backend\target\ironfit-backend-3.0.0.jar started by Lina in C:\Users\Lina\Desktop\IronFit_Flutter-main\backend)
+2026-11-16T15:42:57.810+01:00  INFO 31444 --- [ironfit] [           main] com.ironfit.IronFitApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T15:42:58.839+01:00  INFO 31444 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-16T15:42:58.964+01:00  INFO 31444 --- [ironfit] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 20 JPA repository interfaces.
+2026-11-16T15:43:00.321+01:00  INFO 31444 --- [ironfit] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-16T15:43:00.356+01:00  INFO 31444 --- [ironfit] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T15:43:00.356+01:00  INFO 31444 --- [ironfit] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-11-16T15:43:00.421+01:00  INFO 31444 --- [ironfit] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-16T15:43:00.426+01:00  INFO 31444 --- [ironfit] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2560 ms
+2026-11-16T15:43:00.876+01:00  INFO 31444 --- [ironfit] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-16T15:43:01.042+01:00  INFO 31444 --- [ironfit] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-11-16T15:43:01.105+01:00  INFO 31444 --- [ironfit] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-16T15:43:01.387+01:00  INFO 31444 --- [ironfit] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-16T15:43:01.424+01:00  INFO 31444 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T15:43:01.576+01:00  INFO 31444 --- [ironfit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f1fbc9f
+2026-11-16T15:43:01.577+01:00  INFO 31444 --- [ironfit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T15:43:01.610+01:00  INFO 31444 --- [ironfit] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-16T15:43:02.770+01:00  INFO 31444 --- [ironfit] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-16T15:43:02.973+01:00  INFO 31444 --- [ironfit] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-16T15:43:03.400+01:00  INFO 31444 --- [ironfit] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-16T15:43:06.699+01:00  INFO 31444 --- [ironfit] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-16T15:43:06.709+01:00  INFO 31444 --- [ironfit] [           main] com.ironfit.IronFitApplication           : Started IronFitApplication in 9.499 seconds (process running for 10.092)
+2026-11-16T15:43:40.955+01:00  INFO 31444 --- [ironfit] [0.0-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T15:43:40.955+01:00  INFO 31444 --- [ironfit] [0.0-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T15:43:40.957+01:00  INFO 31444 --- [ironfit] [0.0-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-16T15:43:41.070+01:00  INFO 31444 --- [ironfit] [0.0-8080-exec-1] c.ironfit.service.StripeCheckoutService  : webhook: received event type=checkout.session.completed
+2026-11-16T15:43:41.070+01:00  INFO 31444 --- [ironfit] [0.0-8080-exec-1] c.ironfit.service.StripeCheckoutService  : webhook: resolved order id='10-eur-5e0393a665627a2879decbd9' for event type=checkout.session.completed
+2026-11-16T15:43:42.258+01:00  INFO 31444 --- [ironfit] [0.0-8080-exec-1] c.ironfit.service.StripeCheckoutService  : webhook: fulfilled order 10-eur-5e0393a665627a2879decbd9 for member 10

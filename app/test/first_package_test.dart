@@ -38,7 +38,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Planning').last);
     await tester.pumpAndSettle();
-    expect(find.text('Demain'), findsOneWidget);
+    expect(find.textContaining('Demain ·'), findsOneWidget);
     expect(log.where((r) => r.url.path.endsWith('/classes')).length, count);
   });
   testWidgets('homepage identifies failed programs instead of empty programs', (

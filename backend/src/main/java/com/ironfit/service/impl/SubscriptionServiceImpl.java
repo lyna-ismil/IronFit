@@ -61,7 +61,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
         Plan p = planId == null ? null : plans.findById(planId).orElse(null);
         User u = userId == null ? null : users.findByIdAndRoleIn(userId, AccessService.MEMBER_ROLES).orElse(null);
         if (p == null || u == null) throw ApiException.notFound("Membre ou tarif introuvable");
-        LocalDate end = extend(u.getSubEnd(), p.getDuration(), LocalDate.now());
+        LocalDate end = com.ironfit.service.MembershipRules.extend(u.getSubEnd(), p, LocalDate.now(java.time.ZoneId.of("Africa/Tunis")));
         u.setPlan(p);
         u.setSubEnd(end);
         Payment pay = new Payment();

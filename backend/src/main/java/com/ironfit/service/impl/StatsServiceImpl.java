@@ -22,7 +22,7 @@ public class StatsServiceImpl implements StatsService {
     private final SubscriptionRequestRepository requests;
     private final CoachClientRepository links;
     private final WorkoutRepository workouts;
-    private final BookingRepository bookings;
+    private final DatedBookingRepository bookings;
     private final ProductRepository products;
     private final EquipmentRepository equipment;
     private final CheckinRepository checkins;
@@ -32,7 +32,7 @@ public class StatsServiceImpl implements StatsService {
     private final AccessService access;
 
     public StatsServiceImpl(UserRepository users, SubscriptionRequestRepository requests, CoachClientRepository links, WorkoutRepository workouts,
-                            BookingRepository bookings, ProductRepository products, EquipmentRepository equipment, CheckinRepository checkins,
+                            DatedBookingRepository bookings, ProductRepository products, EquipmentRepository equipment, CheckinRepository checkins,
                             PaymentRepository payments, ClassSessionRepository classes, ProgramRepository programs, AccessService access) {
         this.users = users;
         this.requests = requests;
@@ -65,7 +65,11 @@ public class StatsServiceImpl implements StatsService {
 
     private List<Map<String, Object>> fill(List<ClassSession> list) {
         Map<Long, Long> taken = new HashMap<>();
-        for (Object[] row : bookings.countPerClass()) taken.put((Long) row[0], (Long) row[1]);
+        for (ClassSession c : list) {
+            var today=LocalDate.now(java.time.ZoneId.of("Africa/Tunis"));
+            var date=today.plusDays((c.getDay()-today.getDayOfWeek().getValue()+8)%7);
+            taken.put(c.getId(),bookings.countByClassSessionIdAndSessionDate(c.getId(),date));
+        }
         List<Map<String, Object>> out = new ArrayList<>();
         for (ClassSession c : list) {
             Map<String, Object> m = new LinkedHashMap<>();

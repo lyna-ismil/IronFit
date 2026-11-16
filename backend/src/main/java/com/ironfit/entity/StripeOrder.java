@@ -11,6 +11,7 @@ public class StripeOrder {
  @Column(nullable=false) private Long planId;
  private String planName;
  private String duration;
+ private Boolean structuredDuration;
  private Long subtotal;
  private String mode;
  private String sessionId;
